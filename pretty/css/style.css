@@ -7809,16 +7809,16 @@ h1, h2, h3, h4, h5,
         .pricing-entry .button .btn.btn-outline-primary:hover, .pricing-entry .button .btn.btn-outline-primary:focus {
           background: #fff !important; }
   .pricing-entry:hover, .pricing-entry:focus {
-    border: 1px solid #fa5bdd; }
+    border: 1px solid #fa5b8d; }
     .pricing-entry:hover .button .btn.btn-outline-primary, .pricing-entry:focus .button .btn.btn-outline-primary {
-      background: #fa5bdd !important;
+      background: #fa5b8d !important;
       border: 1px solid #fa5bdd !important;
       color: #fff; }
   .pricing-entry.active {
-    border: 1px solid #fa5bdd; }
+    border: 1px solid #fa5b8d; }
     .pricing-entry.active .button .btn.btn-outline-primary {
-      background: #fa5bdd !important;
-      border: 1px solid #fa5bdd !important;
+      background: #fa5b8d !important;
+      border: 1px solid #fa5b8d !important;
       color: #fff; }
 
 .ftco-appointment {
