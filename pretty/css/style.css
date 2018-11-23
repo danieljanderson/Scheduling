@@ -7780,7 +7780,7 @@ h1, h2, h3, h4, h5,
   .pricing-entry p .price {
     font-weight: 400;
     font-size: 20px;
-    color: #fa5bdd; }
+    color: #fa5b8d; }
   .pricing-entry p .per {
     font-size: 12px; }
   .pricing-entry ul {
@@ -7829,7 +7829,7 @@ h1, h2, h3, h4, h5,
     left: 0;
     right: 0;
     bottom: 0;
-    background: #fa5bdd;
+    background: #fa5b8d;
     opacity: 1; }
 
 .appointment-info {
@@ -8285,11 +8285,11 @@ textarea.form-control {
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
-      color: #fa5bdd !important; }
+      color: #fa5b8d !important; }
   .ftco-counter .text strong.number {
     font-weight: 400;
     font-size: 30px;
-    color: #fa5bdd; }
+    color: #fa5b8d; }
   .ftco-counter .text span {
     font-weight: 400;
     font-size: 14px;
