@@ -12,51 +12,54 @@
     <script src="js/appointment.js"></script>
     </head>
     <body>
+      <!-- start of row div-->
         <div class="row">
+          <!--beginning of form-->
+          <!-- beginning full name div-->
             <form class="col s12">
+              <!-- start first name div-->
               <div class="row fullname">
                 <div class="input-field col s6">
                   <i class ="material-icons prefix">account_circle</i>
                   <input id="icon_prefix" type="text" class="validate">
                   <label for="icon_prefix">First Name</label>
+                <!--end of first name div-->
                 </div>
+                
+                <!-- start of last name div -->
                 <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
                   <input id="last_name" type="text" class="validate">
                   <label for="last_name">Last Name</label>
                 </div>
+                <!-- end of last name div-->
+              
               </div>
+                <!-- end of full name div-->
+
+                <!-- start of phone number div-->
               <div class="row phone_number">
                 <div class="input-field col s12">
                   <i class= "material-icons prefix">phone</i>
-                  <input  id="icon_telephone" type="tel" class="validate"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
-                  <label for="icon_telephone">Telephone</label>
-                  <span class="helper-text" data-error="wrong"data-success="right">helper text</span>
+                  <input  id="icon_telephone" type="tel" class="validate">
+                  <label for="icon_telephone">Telephone</label>          
                 </div>
               </div>
+              <!-- End of phone number div-->
+             
+              <!-- start of email div-->
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <label for="password">Password</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
+                  <i class = "material-icons prefix">email</i>
                   <input id="email" type="email" class="validate">
                   <label for="email">Email</label>
                 </div>
               </div>
-              <div class="row">
-                <div class="col s12">
-                  This is an inline input field:
-                  <div class="input-field inline">
-                    <input id="email_inline" type="email" class="validate">
-                    <label for="email_inline">Email</label>
-                    <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
-                  </div>
-                </div>
+              <!-- end of email div-->
               </div>
+              <!--end of row div-->
             </form>
-          </div>
+            <!-- end of form-->
+          
     </body>
 </html>
