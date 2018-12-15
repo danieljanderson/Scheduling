@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
              appointmentDate= date
              console.log(appointmentDate)
               //getAppointmentTime()
+
+              // modifiying the date object to only display the date not including the hours
+              var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+              var newDate = appointmentDate.toLocaleDateString("en-US", options)
+              console.log(newDate)
             
         }
     }
