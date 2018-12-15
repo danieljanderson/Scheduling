@@ -1,25 +1,24 @@
-var appointmentDate
-var appointmentTime
+
 document.addEventListener('DOMContentLoaded', function() {
     
     var options = {
         format: 'mmmm dd, yyyy',
         onSelect: function(date) { 
              //the appointmentDate is the date the user chooses for their appointment
-             appointmentDate= date
-             console.log(appointmentDate)
-              //getAppointmentTime()
+             var selectedDate= date
+             console.log(selectedDate)
 
               // modifiying the date object to only display the date not including the hours
-              var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-              var newDate = appointmentDate.toLocaleDateString("en-US", options)
-              console.log(newDate)
+              var dateFormat = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+              var modifiedDate = selectedDate.toLocaleDateString("en-US", dateFormat)
+              console.log(modifiedDate)
             
         }
     }
 
-    var elems = document.querySelectorAll('.datepicker');
-    var instances = M.Datepicker.init(elems, options);
+    var htmlDateElems = document.querySelectorAll('.datepicker');
+    var dateInstances = M.Datepicker.init(htmlDateElems, options);
+
 })
 document.addEventListener('DOMContentLoaded',function(){
     //returns the selected time the user picks
@@ -27,20 +26,15 @@ document.addEventListener('DOMContentLoaded',function(){
             twelveHour:true,
             vibrate:true,
             onSelect: function(hour,second){
-                var hourtime = hour
-                var secondtime = second
-                console.log(hourtime,"this is the time on the select is the hour"+"and"+secondtime+"is the second time")
+                var hourSelected = hour
+                var minuteSelected = second
+                console.log(hourSelected,"this is the time on the select is the hour"+"and"+minuteSelected+"is the second time")
                 }
             }
             
         
-        var timeElems = document.querySelectorAll('.timepicker');
-        var timeInstances = M.Timepicker.init(timeElems, timeOption,time);
-        var time= timeInstances['time']
-        console.log("this is the time"+time)
-    
-    
-   
+        var htmlTimeElems = document.querySelectorAll('.timepicker');
+        var timeInstances = M.Timepicker.init(htmlTimeElems, timeOption);
 });
 
 
