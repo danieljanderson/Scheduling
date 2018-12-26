@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded',function(){
                // element with the fields that the user inputs I use the first node.  That returns a node object that has a 
                // property of value that which is then used to return the value from the field and store it in the user object
                USER.firstName = document.getElementsByClassName('userfirstname')[0].value
-               USER.lastName = document.getElementsByClassName('userlastname')[0].value
-               USER.emailAddress = document.getElementsByClassName('useremail')[0].value
+               console.log(USER.lastName = document.getElementsByClassName('userlastname')[0])
+               //USER.emailAddress = document.getElementsByClassName('user_email')[0].value
                USER.phoneNumber = document.getElementsByClassName('usernumber')[0].value
                console.log("this is the user in side the onselct"+USER)
                 }
