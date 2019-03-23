@@ -1,0 +1,20 @@
+{
+  "name": "pretty",
+  "version": "1.0.0",
+  "description": "This is a demo scheduling app for a salon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "sadie_website"
+  },
+  "author": "Daniel Anderson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19",
+    "node": "^11.12.0"
+  }
+}
