@@ -1,6 +1,8 @@
 var express = require('express')
 var app = express()
-
+app.get('/api', (req, res) => {
+  res.send({ hi: 'there' })
+})
 // var port = 3000
 // var mongoose = require('mongoose')
 // var mongoDB = 'mongodb://127.0.0.1/my_database'
