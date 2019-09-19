@@ -1,8 +1,7 @@
 var express = require('express')
+const routes = require('./routes/routes')
 var app = express()
-app.get('/api', (req, res) => {
-  res.send({ hi: 'there' })
-})
+
 // var port = 3000
 // var mongoose = require('mongoose')
 // var mongoDB = 'mongodb://127.0.0.1/my_database'
@@ -22,4 +21,6 @@ app.get('/api', (req, res) => {
 // app.listen(port, () => {
 //   console.log('Server listening on port ' + port)
 // })
+
+routes(app)
 module.exports = app
