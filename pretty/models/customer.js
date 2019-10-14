@@ -4,18 +4,12 @@ const Schema = mongoose.Schema
 const CustomerSchema = new Schema({
   firstName: {
     type: String,
-    validate: {
-      validator: firstName => firstName.length > 0,
-      message: 'first name must be longer than 0 characters',
-    },
+
     required: [true, 'First Name is required'],
   },
   lastName: {
     type: String,
-    validate: {
-      validator: lastName => lastName.length > 0,
-      message: 'last name must be longer than 0 characters',
-    },
+
     required: [true, 'Last Name is required'],
   },
   phoneNumber: {
