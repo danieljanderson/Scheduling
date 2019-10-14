@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+const AppointmentSchema = require('./appointments')
 
 const CustomerSchema = new Schema({
   firstName: {
@@ -26,6 +27,7 @@ const CustomerSchema = new Schema({
     },
     required: [true, 'Email is required'],
   },
+  appointments: [AppointmentsSchema],
 })
 const Customer = mongoose.model('customer', CustomerSchema)
 
