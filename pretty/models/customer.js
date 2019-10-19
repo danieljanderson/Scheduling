@@ -27,7 +27,7 @@ const CustomerSchema = new Schema({
     },
     required: [true, 'Email is required'],
   },
-  appointments: [AppointmentsSchema],
+  appointments: [AppointmentSchema],
 })
 const Customer = mongoose.model('customer', CustomerSchema)
 

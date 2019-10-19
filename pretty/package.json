@@ -4,7 +4,7 @@
   "description": "This is a demo scheduling app for a salon",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon --exec 'mocha --recursive -R min'"
+    "test": "NODE_ENV=test nodemon --exec 'mocha --recursive -R min --exit'"
   },
   "repository": {
     "type": "git",
