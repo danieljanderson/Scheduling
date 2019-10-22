@@ -1,6 +1,7 @@
-const AppointmentsController = require('../controllers/appointments_controller')
+const CustomersController = require('../controllers/customers_controller')
 module.exports = app => {
-  app.get('/api', (req, res) => {
-    res.send({ hi: 'there' })
-  })
+  // this will be where I fetch all the appointments from the database.
+  app.get('/api', CustomersController.greeting)
+
+  app.post('/api/customers', CustomersController.create)
 }
