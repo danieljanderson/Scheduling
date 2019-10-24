@@ -42,4 +42,24 @@ describe('Customers controller', () => {
         })
     })
   })
+  it('DELETE to /api/customers/id can delete a customer', done => {
+    const customer = new Customer({
+      firstName: 'Joe',
+      lastName: 'Smith',
+      phoneNumber: '440-344-5726',
+      email: 'test@test.com',
+      appointments: [{ AppointmentDate: new Date(2018, 11, 24, 10, 33, 30, 0) }],
+    })
+    customer.save().then(() => {
+      request(app)
+        .delete('/api/customers/' + customer._id)
+        .end(() => {
+          Customer.findOne({ email: 'test@test.com' }).then(customer => {
+            console.log('Hi there', customer)
+            assert(customer === null)
+            done()
+          })
+        })
+    })
+  })
 })

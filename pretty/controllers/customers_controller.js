@@ -15,9 +15,16 @@ module.exports = {
     const customerID = req.params.id
     const customerProps = req.body
 
-    Customer.findByIdAndUpdate({ _id: customerID }, customerProps)
+    Customer.findOneAndUpdate({ _id: customerID }, customerProps)
       .then(() => Customer.findById({ _id: customerID }))
       .then(customer => res.send(customer))
+      .catch(next)
+  },
+  delete(req, res, next) {
+    const customerID = req.params.id
+
+    Customer.findOneAndRemove({ _id: customerID })
+      .then(customer => res.send(customer).status(200))
       .catch(next)
   },
 }
