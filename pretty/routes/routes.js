@@ -4,4 +4,5 @@ module.exports = app => {
   app.get('/api', CustomersController.greeting)
 
   app.post('/api/customers', CustomersController.create)
+  app.put('/api/customers/:id', CustomersController.update)
 }

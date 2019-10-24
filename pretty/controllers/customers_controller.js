@@ -11,4 +11,13 @@ module.exports = {
       .then(customer => res.send(customer))
       .catch(next)
   },
+  update(req, res, next) {
+    const customerID = req.params.id
+    const customerProps = req.body
+
+    Customer.findByIdAndUpdate({ _id: customerID }, customerProps)
+      .then(() => Customer.findById({ _id: customerID }))
+      .then(customer => res.send(customer))
+      .catch(next)
+  },
 }

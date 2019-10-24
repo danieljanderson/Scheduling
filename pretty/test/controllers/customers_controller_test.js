@@ -22,4 +22,24 @@ describe('Customers controller', () => {
         })
       })
   })
+  it('Put to api/cutomers/id updates a existing customer', done => {
+    const customer = new Customer({
+      firstName: 'Joe',
+      lastName: 'Smith',
+      phoneNumber: '440-344-5726',
+      email: 'test@test.com',
+      appointments: [{ AppointmentDate: new Date(2018, 11, 24, 10, 33, 30, 0) }],
+    })
+    customer.save().then(() => {
+      request(app)
+        .put('/api/customers/' + customer._id)
+        .send({ phoneNumber: '740-345-0987' })
+        .end(() => {
+          Customer.findOne({ email: 'test@test.com' }).then(customer => {
+            assert(customer.phoneNumber === '740-345-0987')
+            done()
+          })
+        })
+    })
+  })
 })
