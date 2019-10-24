@@ -4,8 +4,11 @@ module.exports = {
   greeting(req, res) {
     res.send({ hi: 'there' })
   },
-  create(req, res) {
+  create(req, res, next) {
     const customerProps = req.body
-    Customer.create(customerProps).then(customer => res.send(customer))
+    //it creates the  record and then sends it back.
+    Customer.create(customerProps)
+      .then(customer => res.send(customer))
+      .catch(next)
   },
 }
