@@ -1,6 +1,7 @@
 const assert = require('assert')
 const request = require('supertest')
 const mongoose = require('mongoose')
+mongoose.set('useFindAndModify', false)
 const app = require('../../app.js')
 const Customer = mongoose.model('customer')
 

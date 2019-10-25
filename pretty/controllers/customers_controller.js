@@ -23,7 +23,7 @@ module.exports = {
   delete(req, res, next) {
     const customerID = req.params.id
 
-    Customer.findOneAndRemove({ _id: customerID })
+    Customer.findOneAndDelete({ _id: customerID })
       .then(customer => res.send(customer).status(200))
       .catch(next)
   },

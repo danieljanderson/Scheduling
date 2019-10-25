@@ -5,5 +5,5 @@ module.exports = app => {
 
   app.post('/api/customers', CustomersController.create)
   app.put('/api/customers/:id', CustomersController.update)
-  app.delete('api/customers/:id', CustomersController.delete)
+  app.delete('/api/customers/:id', CustomersController.delete)
 }
