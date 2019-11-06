@@ -1,10 +1,10 @@
+var appointmentDate = ''
+var appointmentTime = ''
 var USER = {
   firstName: '',
   lastName: '',
-  emailAddress: '',
+  email: '',
   phoneNumber: '',
-  appointmentDate: '',
-  appointmentTime: '',
   appointments: [],
 }
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // modifiying the date object to only display the date not including the hours
       var dateFormat = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
       modifiedDate = selectedDate.toLocaleDateString('en-US', dateFormat)
-      USER.appointmentDate = modifiedDate
+      appointmentDate = modifiedDate
       console.log('I think this is where the appointmentDate is assigned')
       console.log(USER.appointmentDate)
     },
@@ -39,22 +39,18 @@ document.addEventListener('DOMContentLoaded', function() {
     onSelect: function(hour, second) {
       var hourSelected = hour
       var minuteSelected = second
-      USER.appointmentTime = hourSelected + ':' + minuteSelected
+      appointmentTime = hourSelected + ':' + minuteSelected
       console.log(USER)
       console.log('!')
       // so I have to access the Node element from the html.  Since I know that there is only one
       // element with the fields that the user inputs I use the first node.  That returns a node object that has a
       // property of value that which is then used to return the value from the field and store it in the user object
-      console.log(
-        'this is for the combination of appointmentTime and Date',
-        USER.appointmentTime + USER.appointmentDate
-      )
-      USER.appointments.push(new Date(USER.appointmentDate + ' ' + USER.appointmentTime))
+      USER.appointments.push(new Date(appointmentDate + ' ' + appointmentTime))
       console.log('this is the new user appointment date object')
       console.log(USER.appointments)
       USER.firstName = document.getElementsByClassName('userfirstname')[0].value
       USER.lastName = document.getElementsByClassName('userlastname')[0].value
-      USER.emailAddress = document.getElementsByClassName('user_email')[0].value
+      USER.email = document.getElementsByClassName('user_email')[0].value
       USER.phoneNumber = document.getElementsByClassName('usernumber')[0].value
       console.log('this is the user in side the onselct' + USER)
     },
