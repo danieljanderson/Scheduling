@@ -1,6 +1,6 @@
 var appointmentDate = ''
 var appointmentTime = ''
-var USER = {
+var Customer = {
   firstName: '',
   lastName: '',
   email: '',
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
       modifiedDate = selectedDate.toLocaleDateString('en-US', dateFormat)
       appointmentDate = modifiedDate
       console.log('I think this is where the appointmentDate is assigned')
-      console.log(USER.appointmentDate)
+      console.log(Customer.appointmentDate)
     },
   }
 
@@ -40,19 +40,19 @@ document.addEventListener('DOMContentLoaded', function() {
       var hourSelected = hour
       var minuteSelected = second
       appointmentTime = hourSelected + ':' + minuteSelected
-      console.log(USER)
+      console.log(Customer)
       console.log('!')
       // so I have to access the Node element from the html.  Since I know that there is only one
       // element with the fields that the user inputs I use the first node.  That returns a node object that has a
       // property of value that which is then used to return the value from the field and store it in the user object
-      USER.appointments.push(new Date(appointmentDate + ' ' + appointmentTime))
+      Customer.appointments.push(new Date(appointmentDate + ' ' + appointmentTime))
       console.log('this is the new user appointment date object')
-      console.log(USER.appointments)
-      USER.firstName = document.getElementsByClassName('userfirstname')[0].value
-      USER.lastName = document.getElementsByClassName('userlastname')[0].value
-      USER.email = document.getElementsByClassName('user_email')[0].value
-      USER.phoneNumber = document.getElementsByClassName('usernumber')[0].value
-      console.log('this is the user in side the onselct' + USER)
+      console.log(Customer.appointments)
+      Customer.firstName = document.getElementsByClassName('userfirstname')[0].value
+      Customer.lastName = document.getElementsByClassName('userlastname')[0].value
+      Customer.email = document.getElementsByClassName('user_email')[0].value
+      Customer.phoneNumber = document.getElementsByClassName('usernumber')[0].value
+      console.log('this is the user in side the onselct' + Customer)
     },
   }
 
