@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // so I have to access the Node element from the html.  Since I know that there is only one
       // element with the fields that the user inputs I use the first node.  That returns a node object that has a
       // property of value that which is then used to return the value from the field and store it in the user object
-      Customer.appointments.push(new Date(appointmentDate + ' ' + appointmentTime))
+      //ToDo make values from customers bind on submit button click.  in other words  move lines 50to 57 to ajax file.
+      Customer.appointments.push({ AppointmentDate: new Date(appointmentDate + ' ' + appointmentTime) })
       console.log('this is the new user appointment date object')
       console.log(Customer.appointments)
       Customer.firstName = document.getElementsByClassName('userfirstname')[0].value

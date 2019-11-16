@@ -7,6 +7,8 @@ module.exports = {
   create(req, res, next) {
     const customerProps = req.body
     //it creates the  record and then sends it back.
+
+    console.log(req.body)
     Customer.create(customerProps)
       .then(customer => res.send(customer))
       .catch(next)
