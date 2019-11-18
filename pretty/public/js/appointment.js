@@ -1,12 +1,13 @@
-var appointmentDate = ''
-var appointmentTime = ''
-var Customer = {
+//var appointmentDate = ''
+//var appointmentTime = ''
+/*var Customer = {
   firstName: '',
   lastName: '',
   email: '',
   phoneNumber: '',
   appointments: [],
 }
+*/
 
 document.addEventListener('DOMContentLoaded', function() {
   var modifiedDate
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
       modifiedDate = selectedDate.toLocaleDateString('en-US', dateFormat)
       appointmentDate = modifiedDate
       console.log('I think this is where the appointmentDate is assigned')
-      console.log(Customer.appointmentDate)
+      // console.log(Customer.appointmentDate)
     },
   }
 
@@ -40,13 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
       var hourSelected = hour
       var minuteSelected = second
       appointmentTime = hourSelected + ':' + minuteSelected
-      console.log(Customer)
+      //console.log(Customer)
       console.log('!')
       // so I have to access the Node element from the html.  Since I know that there is only one
       // element with the fields that the user inputs I use the first node.  That returns a node object that has a
       // property of value that which is then used to return the value from the field and store it in the user object
       //ToDo make values from customers bind on submit button click.  in other words  move lines 50to 57 to ajax file.
-      Customer.appointments.push({ AppointmentDate: new Date(appointmentDate + ' ' + appointmentTime) })
+      /* Customer.appointments.push({ AppointmentDate: new Date(appointmentDate + ' ' + appointmentTime) })
       console.log('this is the new user appointment date object')
       console.log(Customer.appointments)
       Customer.firstName = document.getElementsByClassName('userfirstname')[0].value
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
       Customer.email = document.getElementsByClassName('user_email')[0].value
       Customer.phoneNumber = document.getElementsByClassName('usernumber')[0].value
       console.log('this is the user in side the onselct' + Customer)
+    */
     },
   }
 
