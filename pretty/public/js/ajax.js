@@ -30,6 +30,7 @@ $(function() {
     })
     function success(data) {
       console.log(data)
+      location.reload(true)
     }
 
     console.log('hi')
