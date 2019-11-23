@@ -24,7 +24,7 @@ $(function() {
     Customer.phoneNumber = $('.usernumber')[0].value
     $.ajax({
       type: 'POST',
-      url: 'http://localhost:3050/api/customers',
+      url: '/api/customers',
       data: JSON.stringify(Customer),
       contentType: 'application/json',
       success: success,
