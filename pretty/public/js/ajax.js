@@ -39,7 +39,7 @@ $(function() {
   function get() {
     $.ajax({
       type: 'GET',
-      url: 'http://localhost:3050/api/',
+      url: '/api/',
       success: function(data) {
         console.log(data)
       },
