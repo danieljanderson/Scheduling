@@ -9,7 +9,7 @@ mongoose.Promise = global.Promise;
 app.use(express.static('public'));
 //app.use(express.static('sadie_website/pretty'))
 if (process.env.NODE_ENV !== 'test') {
-  mongoose.connect(process.env.DB_URI, {
+  mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
   });
 }
