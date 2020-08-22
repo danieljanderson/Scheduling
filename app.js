@@ -1,24 +1,24 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const mongoose = require('mongoose')
-const routes = require('./routes/routes')
-const app = express()
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const routes = require('./routes/routes');
+const app = express();
 
-mongoose.Promise = global.Promise
+mongoose.Promise = global.Promise;
 //app.use(express.static(__dirname, 'pretty'))
-app.use(express.static('public'))
+app.use(express.static('public'));
 //app.use(express.static('sadie_website/pretty'))
 if (process.env.NODE_ENV !== 'test') {
-  mongoose.connect(process.env.MONGODB_URI, {
+  mongoose.connect(process.env.DB_URI, {
     useNewUrlParser: true,
-  })
+  });
 }
-app.use(bodyParser.json())
-routes(app)
+app.use(bodyParser.json());
+routes(app);
 app.use((err, req, res, next) => {
-  res.status(422).send({ error: err.message })
-})
-module.exports = app
+  res.status(422).send({ error: err.message });
+});
+module.exports = app;
 
 //const express = require('express')
 //const routes = require('./routes/routes')
